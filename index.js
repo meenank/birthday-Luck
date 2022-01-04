@@ -1,7 +1,7 @@
 const dateIn = document.querySelector("#dateinp");
 const luckIn = document.querySelector("#luckynum");
 const subBtn = document.querySelector("#btnSub");
-const txtArea = document.querySelector("op-styling")
+const txtArea = document.querySelector("#op-styling")
 
 subBtn.addEventListener("click", function resp() {
 
@@ -20,10 +20,11 @@ subBtn.addEventListener("click", function resp() {
 
     console.log("sum=", sum)
     console.log("rem=", sum % luckNum);
-    if (sum % luckNum == 0) {
-        txtArea.value = "Yay, your birthday's lucky 🥳";
+
+    if (sum % luckNum === 0) {
+        txtArea.innerHTML = "YaY, you're lucky in your own way! 🥳";
     } else {
-        txtArea.value = "darn it, guess you have to create your own luck! 😉";
+        txtArea.innerHTML = "Well guess what, you have to create your own luck! 😉";
     }
 
 
